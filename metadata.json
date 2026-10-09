@@ -1,0 +1,8 @@
+{
+  "name": "Remix AURA - Sovereign Visual Brain",
+  "description": "Segundo cérebro visual soberano com Cognitive Graph Fabric, curadoria inteligente de capturas e soberania de dados local-first.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

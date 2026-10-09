@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070A14"/>
+      <stop offset="50%" stop-color="#0A1124"/>
+      <stop offset="100%" stop-color="#04060B"/>
+    </linearGradient>
+    <linearGradient id="ringCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="ringViolet" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#070A14" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Sovereign Backdrop -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  <rect width="508" height="508" x="2" y="2" rx="126" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+
+  <!-- Core Glow Ambient -->
+  <circle cx="256" cy="256" r="160" fill="url(#coreGlow)"/>
+
+  <!-- Orbital Cognitive Graph Rings -->
+  <g filter="url(#glow)">
+    <!-- Outer Orbital Ellipse -->
+    <ellipse cx="256" cy="256" rx="150" ry="68" fill="none" stroke="url(#ringCyan)" stroke-width="6" transform="rotate(-30 256 256)" stroke-dasharray="14 8"/>
+    
+    <!-- Cross Orbital Ellipse -->
+    <ellipse cx="256" cy="256" rx="150" ry="68" fill="none" stroke="url(#ringViolet)" stroke-width="6" transform="rotate(30 256 256)"/>
+    
+    <!-- Central Sovereign Nucleus -->
+    <circle cx="256" cy="256" r="32" fill="#0A1124" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="256" cy="256" r="18" fill="#38bdf8"/>
+    <circle cx="256" cy="256" r="8" fill="#ffffff"/>
+
+    <!-- Orbital Graph Satellite Nodes -->
+    <circle cx="150" cy="195" r="12" fill="#818cf8" stroke="#ffffff" stroke-width="2.5"/>
+    <circle cx="362" cy="317" r="12" fill="#38bdf8" stroke="#ffffff" stroke-width="2.5"/>
+    <circle cx="362" cy="195" r="10" fill="#c084fc" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="150" cy="317" r="10" fill="#34d399" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="256" cy="120" r="9" fill="#38bdf8" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="256" cy="392" r="9" fill="#818cf8" stroke="#ffffff" stroke-width="2"/>
+  </g>
+</svg>
